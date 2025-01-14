@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Find the Intruder</title>
+</head>
+<body>
+    <audio id="background-music" autoplay></audio>
+    <div id="main">
+        <div id="counterClick"> 320x
+            <p> Nombre de clics : <span id="click">0</span></p>
+            <p>Limite: 15</p>
+        </div>
+        <div id="over">
+            <p>GAME OVER</p>
+            <button id="restart-over" type="reset">Réessayer</button>
+        </div>
+        <div id="win">
+            <p>WIN !</p>
+            <button id="restart-win" type="reset">Réessayer</button>
+        </div>
+        <div id="grid"></div>
+        <script type="module" src="js/script.js"></script>
+    </div>
+</body>
+</html>

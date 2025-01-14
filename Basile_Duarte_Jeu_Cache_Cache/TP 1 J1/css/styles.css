@@ -1,0 +1,82 @@
+body {
+    background-image: url('../images/scene2metal.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+}
+
+
+#over, #win {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;              
+    height: 100vh;             
+    color: white;             
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;       
+    font-size: 5em;            
+    font-weight: bold;        
+    text-align: center;
+    z-index: 1000;             
+    visibility: hidden;
+    transition: visibility 0.5s, opacity 0.5s;
+    opacity: 0;
+}
+
+#over p, #win p {
+    background-color: rgba(0,0,0,0.35);
+    border-radius: 5px;
+}
+
+#win.visible, #over.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(8, 75px);
+    grid-template-rows: repeat(8, 75px);
+    gap: 5px;
+    justify-items: center; 
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    background-color: #6e06f7c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #f80808;
+    transform: scale(1.1);
+}
+
+#counterClick {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: 75%;
+}
+
+#counterClick p {
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
